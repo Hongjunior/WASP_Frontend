@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'home.dart';
 
 void main() => runApp(const MyApp());
 
@@ -8,19 +9,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: SelfTestScreen(),
+      home: SelfTest(),
     );
   }
 }
 
-class SelfTestScreen extends StatefulWidget {
-  const SelfTestScreen({super.key});
+class SelfTest extends StatefulWidget {
+  const SelfTest({super.key});
 
   @override
-  SelfTestScreenState createState() => SelfTestScreenState();
+  SelfTestState createState() => SelfTestState();
 }
 
-class SelfTestScreenState extends State<SelfTestScreen> {
+class SelfTestState extends State<SelfTest> {
   final List<Map<String, String?>> _questions = [
     {'question': '당신은 기억력에 문제가 있습니까?', 'answer': null},
     {'question': '당신은 기억력이 10년 전보다 저하되었습니까?', 'answer': null},
@@ -51,7 +52,33 @@ class SelfTestScreenState extends State<SelfTestScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        automaticallyImplyLeading: false, // 기본 뒤로 가기 아이콘을 제거
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.start, // 왼쪽 정렬
+          children: <Widget>[
+            IconButton(
+              icon: const Icon(
+                Icons.arrow_back_ios,
+                size: 30, // 아이콘 크기 설정
+                color: Color(0xFFEE8F00), // 아이콘 색상 설정
+              ),
+              onPressed: () {
+                Navigator.of(context).pop(); // 이전 화면으로 돌아가기
+              },
+            ),
+            const SizedBox(width: 3), // 아이콘과 텍스트 사이의 간격 설정
+            const Text(
+              '뒤로 가기',
+              style: TextStyle(
+                color: Color(0xFFEE8F00), // 텍스트 색상 설정
+                fontSize: 20, // 텍스트 크기 설정
+                fontWeight: FontWeight.bold, // 볼드체 설정
+              ),
+            ),
+          ],
+        ),
+        backgroundColor: Colors.transparent, // 배경색 투명 설정
+        elevation: 0, // 그림자 제거
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -59,19 +86,21 @@ class SelfTestScreenState extends State<SelfTestScreen> {
             mainAxisSize: MainAxisSize.min,
             children: [
               Container(
-                padding: const EdgeInsets.all(30.0),
+                padding: const EdgeInsets.all(5.0),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFFFF9E2),
                   borderRadius: BorderRadius.circular(20.0),
+                  border: Border.all(
+                    color: const Color(0xFFEE8F00), // 테두리 색상
+                    width: 1,
+                  ),
                 ),
                 child: const Text(
-                  '치매 자가 진단 테스트',
+                  '       치매 자가 진단 테스트       ',
                   style: TextStyle(
-                    fontSize: 36.0,
+                    fontSize: 20.0,
                     fontWeight: FontWeight.bold,
                     color: Color(0xFFEE8F00),
                   ),
-                  textAlign: TextAlign.center, // 텍스트 가운데 정렬
                 ),
               ),
               const SizedBox(height: 50.0),
@@ -100,7 +129,7 @@ class SelfTestScreenState extends State<SelfTestScreen> {
                             ),
                             decoration: BoxDecoration(
                               color: q['answer'] != null
-                                  ? const Color(0xFFFFCC16)
+                                  ? const Color(0xFFEE8F00)
                                   : Colors.transparent,
                               borderRadius: BorderRadius.circular(20.0),
                               boxShadow: q['answer'] != null
@@ -157,7 +186,7 @@ class SelfTestScreenState extends State<SelfTestScreen> {
                               vertical: 8.0,
                               horizontal: 28.0,
                             ),
-                            backgroundColor: const Color(0xFFFFCC16),
+                            backgroundColor: const Color(0xFFEE8F00),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20.0),
                             ),
@@ -181,7 +210,7 @@ class SelfTestScreenState extends State<SelfTestScreen> {
                               vertical: 8.0,
                               horizontal: 15.0,
                             ),
-                            backgroundColor: const Color(0xFFFFCC16),
+                            backgroundColor: const Color(0xFFEE8F00),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20.0),
                             ),
@@ -203,6 +232,28 @@ class SelfTestScreenState extends State<SelfTestScreen> {
                 ),
               const SizedBox(height: 40.0),
             ],
+          ),
+        ),
+      ),
+      bottomNavigationBar: Container(
+        color: const Color(0xFFEE8F00), // 주황색 배경
+        height: 75, // 버튼 세로 크기 설정
+        width: double.infinity, // 화면 가로 전체 차지
+        child: TextButton(
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => const HomeScreen(), // HomeScreen으로 이동
+              ),
+            );
+          },
+          child: const Text(
+            '다음',
+            style: TextStyle(
+              fontSize: 20,
+              color: Colors.white, // 버튼 텍스트 색상
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ),

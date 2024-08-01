@@ -33,6 +33,9 @@ dependencies:
   flutter_native_splash: ^2.0.1
   cupertino_icons: ^1.0.6
   flutter_svg: ^1.0.0
+  animated_text_kit: ^4.2.1
+  intl: ^0.18.1
+  table_calendar: ^3.0.0
 
 dev_dependencies:
   flutter_test:
@@ -44,12 +47,22 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/icons/recording.svg
-    - assets/icons/talk.svg
+    - assets/icons/home.svg
+    - assets/icons/quiz.svg
+    - assets/icons/chat.svg
+    - assets/icons/honeycomb.svg
     - assets/icons/voice.svg
+    - assets/icons/0.png
+    - assets/icons/1-2.png
+    - assets/icons/3-4.png
+    - assets/icons/5-6.png
+    - assets/icons/7.png
+    - assets/icons/logo1.png
+    - assets/icons/logo2.png
+    - assets/icons/quizresult.png
 
 flutter_native_splash:
-  color: "#FFCC16"
+  color: "#EE8F00"
   android: true
   ios: true
   web: true
