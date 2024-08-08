@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'user_info.dart';
+import 'package:provider/provider.dart'; // provider 패키지 import
+import 'config.dart';
 import 'dart:async'; // Timer를 사용하기 위해 import
 import 'package:animated_text_kit/animated_text_kit.dart';
 
@@ -8,17 +10,20 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'WASP',
-      theme: ThemeData(
-        primaryColor: const Color(0xFFEE8F00),
-        scaffoldBackgroundColor: Colors.white, // 기본 배경색을 흰색으로 설정
+    return ChangeNotifierProvider(
+      create: (context) => Config(),
+      child: MaterialApp(
+        title: 'WASP',
+        theme: ThemeData(
+          primaryColor: const Color(0xFFEE8F00),
+          scaffoldBackgroundColor: Colors.white, // 기본 배경색을 흰색으로 설정
+        ),
+        home: const SplashScreen(), // SplashScreen을 home으로 설정
       ),
-      home: const SplashScreen(), // SplashScreen을 home으로 설정
     );
   }
 }

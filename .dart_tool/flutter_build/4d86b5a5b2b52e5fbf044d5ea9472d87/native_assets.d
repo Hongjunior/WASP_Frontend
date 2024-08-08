@@ -1,0 +1,1 @@
+ C:\\Users\\seokj\\Desktop\\장수말벗\\wasp\\.dart_tool\\flutter_build\\4d86b5a5b2b52e5fbf044d5ea9472d87\\native_assets.yaml: 

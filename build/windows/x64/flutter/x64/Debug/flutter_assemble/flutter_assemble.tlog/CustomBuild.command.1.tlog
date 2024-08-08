@@ -1,0 +1,28 @@
+^C:\USERS\SEOKJ\DESKTOP\장수말벗\WASP\BUILD\WINDOWS\X64\CMAKEFILES\DB33B8CC8BE14B4B81FF0E5897F8DB0F\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\Users\seokj\flutter PROJECT_DIR=C:\Users\seokj\Desktop\장수말벗\wasp FLUTTER_ROOT=C:\Users\seokj\flutter FLUTTER_EPHEMERAL_DIR=C:\Users\seokj\Desktop\장수말벗\wasp\windows\flutter\ephemeral PROJECT_DIR=C:\Users\seokj\Desktop\장수말벗\wasp FLUTTER_TARGET=C:\Users\seokj\Desktop\장수말벗\wasp\lib\main.dart DART_DEFINES=RkxVVFRFUl9XRUJfQ0FOVkFTS0lUX1VSTD1odHRwczovL3d3dy5nc3RhdGljLmNvbS9mbHV0dGVyLWNhbnZhc2tpdC8yMzVkYjkxMWJhMjc5NzIyZjVlNjg1ZjM4YjBlZDMwZmE3ZTg1NzBhLw== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=C:\Users\seokj\Desktop\장수말벗\wasp\.dart_tool\package_config.json C:/Users/seokj/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\SEOKJ\DESKTOP\장수말벗\WASP\BUILD\WINDOWS\X64\CMAKEFILES\19FB0094A08D36C905DD6997F18D3222\FLUTTER_ASSEMBLE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\SEOKJ\DESKTOP\장수말벗\WASP\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/seokj/Desktop/장수말벗/wasp/windows -BC:/Users/seokj/Desktop/장수말벗/wasp/build/windows/x64 --check-stamp-file C:/Users/seokj/Desktop/장수말벗/wasp/build/windows/x64/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
