@@ -1,16 +1,24 @@
-# wasp
+# 장수말벗: 노인들을 위한 대화형 치매 예방 프로그램
 
-A new Flutter project.
+## 프로젝트 개요
+**장수말벗**은 노인들을 대상으로 한 대화형 치매 예방 프로그램입니다. 이 프로그램은 GPT API, LangChain, Clova API를 이용하여 사용자와 대화하고, 그 대화를 기반으로 퀴즈를 제공합니다.
 
-## Getting Started
+## 프로젝트 동기
+다양한 연구 결과에 따르면, 두뇌 활동이 활발할수록 치매에 걸릴 확률이 낮아진다는 사실이 입증되었습니다. 예를 들어, 김어수 연세세브란스병원 정신과 교수는 "운동, 일, 독서, 대화 등으로 두뇌 활동이 활발할수록 치매에 걸릴 확률이 낮다"고 설명했습니다. 머리를 많이 쓸수록 신경세포 가지가 풍성해지고, 시냅스(신경세포 간 연결 부위) 거리가 짧아져 신경 전달이 왕성해집니다. 이런 사람은 치매에 잘 걸리지 않으며, 치매가 오더라도 다른 사람보다 늦게 발병합니다.
 
-This project is a starting point for a Flutter application.
+따라서 치매 발병률을 낮추기 위해서는 두뇌 활동을 일상적으로 자극하는 것이 중요합니다. 노인들이 자연스럽게 두뇌를 자극할 수 있는 방법을 찾던 중, 대화형 프로그램이 효과적일 것이라는 아이디어를 떠올렸습니다. **장수말벗**은 이러한 아이디어를 바탕으로 개발되었습니다.
 
-A few resources to get you started if this is your first Flutter project:
+## 기술 스택
+- **GPT API**: 자연어 처리 및 대화 생성
+- **LangChain**: 대화 흐름 제어 및 관리
+- **Clova API**: 음성 인식 및 처리
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 주요 기능
+1. **대화형 인터페이스**: 사용자와 자연스러운 대화를 통해 뇌를 자극합니다.
+2. **퀴즈 제공**: 대화를 기반으로 퀴즈를 생성하여 사용자의 인지 능력을 테스트하고 강화합니다.
+3. **사용자 맞춤형**: 사용자의 반응과 수준에 맞춰 대화와 퀴즈 난이도를 조절합니다.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 프로젝트 목적
+- **치매 예방**: 일상적인 대화를 통해 노인의 뇌를 지속적으로 자극하여 치매를 예방합니다.
+- **사회적 고립 방지**: 노인들이 대화를 통해 사회적 유대감을 느끼고 고립감을 해소합니다.
+- **인지 능력 강화**: 퀴즈를 통해 사용자의 기억력, 문제 해결 능력 등을 강화합니다.
